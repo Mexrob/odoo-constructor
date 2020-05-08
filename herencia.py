@@ -12,13 +12,13 @@ print "# mail: mfalcon@falconsolutions.cl                              #"
 print "#################################################################"
 
 # Entramos el nombre del módulo
-name = raw_input("Entre el Nombre del Modulo a Heredar:")
+name = input("Entre el Nombre del Modulo a Heredar:")
 module = name
 name = name.replace(".", '_')
 name = "herencia_" + name
 form = raw_input("Dame el ID Formulario:")
-pos_campos = raw_input("Dame el nombre Campo de referencia:")
-cant_campos = int(raw_input("Cantidad de Campos a Insertar:"))
+pos_campos = input("Dame el nombre Campo de referencia:")
+cant_campos = int(input("Cantidad de Campos a Insertar:"))
 print ""
 print "###############  Campos  ##############################"
 print ""
@@ -99,9 +99,9 @@ file.write('class '+name+'(models.Model): \n')
 file.write('    _inherit = "' + module + '" \n')
 arreglo = []
 for num in range(1,cant_campos+1):
-    fname = raw_input("Nombre del Campo:")
+    fname = input("Nombre del Campo:")
     print "Char,Text,Boolean,Datetime,Integer"
-    ftipo = raw_input("Tipo de Campo:")
+    ftipo = input("Tipo de Campo:")
     print "-----------------------------------"
     print ""
     print ""
